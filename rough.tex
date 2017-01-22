@@ -203,7 +203,7 @@ for any prime ideal $\mathfrak{p}$ of $A$. \\
 
 \noindent \textbf{(ii)} It is clear that $V(0) \subset X$. Any prime ideal $\mathfrak{p}$
 of $A$ contains $0$, so $V(0) = X$. And as there is no prime ideal that contains
-$1$, $V(1) = \emptyset$.  
+$1$, $V(1) = \emptyset$.  \\
 
 
 \smallskip
@@ -213,8 +213,45 @@ $E_i \subset \mathfrak{p}$ for all $i \in I$. Therefore,
 $\mathfrak{p} \in V(E_i)$ for all $i \in I$, so $\mathfrak{p} \in \bigcap_{i \in I}
 V(E_i)$. This shows $V(\bigcup_{i \in I} E_i ) \subset \bigcap_{i \in I} 
 V(E_i)$. Now, suppose $\mathfrak{p} \in \bigcap_{i \in I} V(E_i)$. Then,  
- 
+$E_i \subset \mathfrak{p}$ for all $i \in I$, so $\bigcup_{i \in I} V(E_i) 
+\subset \mathfrak{p}$. Therefore, $p \in V(\bigcup_{i \in I} E_i)$, so we are done. \\
 
+\smallskip
+
+\noindent We can also see
+\eQb
+\mathfrak{p} \in \bigcap_{i \in I} V(E_i) \iff p \in V(E_i) \>\>\> \forall i \in I
+\iff E_i \subset \mathfrak{p} \>\>\> \forall i \in I \\
+\iff \bigcup_{i \in I} E_i \subset \mathfrak{p} \iff \mathfrak{p} \in 
+V(\bigcup_{i \in I} E_i) 
+\eQe 
+for any prime ideal $\mathfrak{p}$ in $A$. 
+
+\smallskip
+
+\noindent \textbf{(iv)} For any prime ideal $\mathfrak{p}$ of $A$,
+\eQnb
+\mathfrak{p} \in V(\mathfrak{a} \cap \mathfrak{b}) &\implies& 
+\mathfrak{a} \cap \mathfrak{b} \subset \mathfrak{p} \implies
+\mathfrak{a}\mathfrak{b} \subset \mathfrak{a} \cap \mathfrak{b} \subset \mathfrak{p} 
+\nonumber \\
+&\implies& \mathfrak{p} \in V(\mathfrak{a}\mathfrak{b}) 
+\implies \mathfrak{a} \subset \mathfrak{p} \>\>\> \text{or} \>\>\>
+\mathfrak{b} \subset \mathfrak{p} \label{eq:1-15-1} \\
+&\implies& \mathfrak{p} \in V(\mathfrak{a}) \>\>\> \text{and} \>\>\> \mathfrak{p} \in
+V(\mathfrak{b})
+\implies \mathfrak{p} \in V(\mathfrak{a}) \cup V(\mathfrak{b}) \nonumber \\
+&\implies& \mathfrak{a} \subset \mathfrak{p} \>\>\> \text{or} 
+\mathfrak{b} \subset \mathfrak{p} 
+\implies \mathfrak{a} \cap \mathfrak{b} \subset \mathfrak{p} 
+\implies \mathfrak{p} \in V(\mathfrak{a} \cap \mathfrak{b}) \nonumber  
+\eQne
+where~\eqref{eq:1-15-1} holds by primality of $\mathfrak{p}$. Therefore,
+\eQb
+V(\mathfrak{a} \cap \mathfrak{b}) = V(\mathfrak{a}\mathfrak{b}) = 
+V(\mathfrak{a}) V(\mathfrak{b}),
+\eQe
+as required. \hfill $\qed$
 
 \end{solution}
 
@@ -232,7 +269,7 @@ V(E_i)$. Now, suppose $\mathfrak{p} \in \bigcap_{i \in I} V(E_i)$. Then,
 
 \end{solution}
 
-\bigskip
+\newpage
 
 \begin{question}[1.17]
 \hfill
@@ -242,6 +279,52 @@ V(E_i)$. Now, suppose $\mathfrak{p} \in \bigcap_{i \in I} V(E_i)$. Then,
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+We claim that $\mathscr{B} = 
+\{X_f = X \setminus V(f)\}_{f \in A}$ is a basis of the Zariski 
+topology on $X$. Let $O$ be an open subset in the Zariski topology, so
+$O = X \setminus V(E)$ for some $E \in 2^{A}$. Then,
+\eQnb
+O &=& X \setminus V(E) = X \setminus V(\bigcup_{f \in E} \{f\}) \nonumber \\
+&=& X \setminus \bigcap_{f \in E} V(\{f\}) = X \setminus \bigcap_{f \in E} X_f 
+\label{eq:1-17-1}\\
+&=& \bigcup_{f \in E} X \setminus X_f \label{eq:1-17-2} 
+\eQne
+where~\eqref{eq:1-17-1} holds by 1-15-(iii) and~\eqref{eq:1-17-2} holds by 
+DeMorgan's law. Therefore, any open $O$ in the Zariski topology is a union of elements
+in $\mathscr{B}$, so $\mathscr{B}$ is a basis for the Zariski topology. \\
+
+\smallskip 
+
+\noindent \textbf{(i)}
+For any prime ideal $\mathfrak{p}$ of $A$,
+\eQnb
+\mathfrak{p} \in X_f \cap X_g &\iff& \mathfrak{p} \in X_f \>\>\> \text{and}
+\>\>\> \mathfrak{p} \in X_g 
+\iff \mathfrak{p} \not\in V(f) \>\>\> \text{and} \>\>\> \mathfrak{p} \not\in V(g) 
+\nonumber \\
+&\iff& f \not\in \mathfrak{p} \>\>\> \text{and} \>\>\> g \not\in \mathfrak{p} 
+\iff fg \not\in \mathfrak{p} \label{eq:1-17-3} \\ 
+&\iff& \mathfrak{p} \not\in V(fg) \iff 
+\mathfrak{p} \in X_{fg}  \nonumber
+\eQne
+where~\eqref{eq:1-17-3} holds by primality of $\mathfrak{p}$. Therefore,
+$X_{f} \cap X_{g} = X_{fg}$.
+
+\smallskip
+
+\noindent \textbf{(ii)} Observe that 
+\eQnb
+X_f = \emptyset &\iff& X \subset V(f) \iff \>\>\> \forall \>\>\> \text{prime ideal} \>
+\mathfrak{p} \> \text{of} \> A \>\>\> f \in \mathfrak{p} \nonumber \\
+&\iff& f \in \bigcap_{\mathfrak{p} : \> \text{prime ideal of } A} \mathfrak{p} 
+\iff f \>\>\> \text{belongs to the nilradical of} \>\>\> f \label{eq:1-17-4} \\ 
+&\iff& f \>\>\>  \text{is nilpotent.} \nonumber 
+\eQne
+where~\eqref{eq:1-17-4} holds by preposition 1-8. 
+
+\smallskip
+
+\noindent \textbf{(iii)} 
 
 \end{solution}
 
