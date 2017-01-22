@@ -217,9 +217,28 @@ but the later is equivalent to $M_i$ being flat for all $i \in I$, so we are don
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
+Let $\mathfrak{N}$, and $\mathfrak{R}$ be nilradical, and Jacobson radical 
+respectively. As any primal ideal is a maximal idea,
+\eQb
+\mathfrak{N} &=& \bigcap_{\{\mathfrak{p} \> : \> \text{a primal ideal of} 
+\> A\}} \mathfrak{p} \\ 
+&\subset& 
+\bigcap_{\{ \mathfrak{p} \> : \> \text{a maximal ideal of } \> A\}} \mathfrak{p}
+= \mathfrak{R}.
+\eQe
+Hence, it now suffices to show that $\mathfrak{R} \subset \mathfrak{N}$.
+Let $f = a_0 + a_1x + ... + a_n x^n \in \mathfrak{R}$. Then, by preposition 1.9,
+\eQb
+1 + xf = 1 + a_0x + ... a_n x^n{n+1} \>\>\> \text{is a unit in} \>\>\> A[x].
+\eQe 
+Now, by exercise 1.2-i, $a_0 , ... , a_n$ are nilpotent, and by 1-2-ii,
+$f \in \mathfrak{N}$. Therefore, $\mathfrak{N} = \mathfrak{R}$. \hfill $\qed$
 
 
 \end{solution}
+
+\bigskip
+
 \begin{question}[1.5]
 \hfill
 \begin{figure}[h!]
@@ -228,7 +247,7 @@ but the later is equivalent to $M_i$ being flat for all $i \in I$, so we are don
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-
+Let $\mathfrak{p}$ be a prime ideal of $A$. 
 
 \end{solution}
 
