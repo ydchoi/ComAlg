@@ -184,7 +184,16 @@ but the later is equivalent to $M_i$ being flat for all $i \in I$, so we are don
 \end{figure}
 \end{question}
 \begin{solution} \hfill \\
-
+As $x$ is nilpotent, we can choose $n \in \mathbb{N}$ such that $x^n = 0$.
+Then,
+\eQb
+(1+x)(1 +(-1)x + ... + (-1)^{n-1}x^{n-1}) = 1 - x^{n} = 1.
+\eQe
+Therefore, $1+x$ is a unit. Now, let $y$ be a unit. Then, 
+\eQb
+(y+x)(z - z^2 x + ... + (-1)^{n-1}z^{n}x^{n-1}) = yz - z^{n}x^{n} = 1.
+\eQe
+Therefore, $x+y$ is a unit. \hfill $\qed$
 
 \end{solution}
 \begin{question}[1.2]
